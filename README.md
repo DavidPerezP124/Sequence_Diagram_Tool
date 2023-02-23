@@ -58,4 +58,29 @@ You can create a tab to collect events with a POST request, as mentioned above:
 
 ![POST](https://user-images.githubusercontent.com/32963483/220938149-fa229b53-4862-49a3-a41a-75eefdfc30d9.png)
 
+Now you need to connect to the websocket:
+
+![WS Connect](https://user-images.githubusercontent.com/32963483/220938976-ed5039ef-f6d9-4e30-96bd-601308846163.png)
+
+Now send a JSON message with the required properties: type, data, date:
+
+![Message](https://user-images.githubusercontent.com/32963483/220939237-9f824214-2dbd-4896-947f-4e4ecc9216bf.png)
+
+And the app will update with the message that was sent:
+
+![App shows message](https://user-images.githubusercontent.com/32963483/220939339-41eb49cf-f998-456c-b712-e60252958ab5.png)
+
+When you are happy with your diagram:
+
+![Screenshot 2023-02-23 at 8 27 58](https://user-images.githubusercontent.com/32963483/220939532-178f0fba-93b1-41f6-a0d6-103609eb6739.png)
+
+NOTE: Only available if you are using MacOS Ventura or above.
+
+When you click share:
+A preview of the image will appear, you may either cancel or share the image:
+
+![Screenshot 2023-02-23 at 8 28 07](https://user-images.githubusercontent.com/32963483/220939793-97d8f718-1b2f-40da-9912-3eefd65628c3.png)
+
+
+
 
