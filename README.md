@@ -30,13 +30,17 @@ curl --location 'http://localhost:8220/create-process' \
 Or with the `+` sign at the top left, just give it a name and create the process to send to.
 
 
-Now you can send any evnt to it and the application will order it according to the timestamp, the events must have the following values:
+Now you can send any event to the websocket and the application will order it according to the timestamp, the events must have the following values:
 
 {
     "type": "", // The layer calling this
     "data": "", // The interaction name
     "date": ""  // A Unix timestamp in seconds since epoch
 }
+
+For the current example you would send the message to the following socket: `ws://localhost:8282/process?id=New_Process`
+
+If you have not worked with websockets before, you may start [here](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications) 
 
 ## I have the diagrama now, so what?
 
@@ -48,4 +52,10 @@ You can measure time between events.
 
 ## Examples
 
-WIP
+An example to get started using Postman to understand the flow of the application.
+
+You can create a tab to collect events with a POST request, as mentioned above:
+
+![POST](https://user-images.githubusercontent.com/32963483/220938149-fa229b53-4862-49a3-a41a-75eefdfc30d9.png)
+
+
