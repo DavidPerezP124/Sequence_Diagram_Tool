@@ -5,8 +5,8 @@ export default class Network {
     }
 
     getRows = async (id) => {
-       const response = await fetch(`http://${this.host}:${this.port}/rows?id=${id}`)
-       const data = await response.json()
-       return data
+        const response = await fetch(`http://${this.host}:${this.port}/rows?id=${id}`)
+        const data = await response.json()
+        return data
     }
 }

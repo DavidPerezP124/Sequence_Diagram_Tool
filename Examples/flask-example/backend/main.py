@@ -7,7 +7,7 @@ from datetime import timezone
 import datetime
 
 app = Flask(__name__)
-CORS(app, resources={r"/rows/*": {"origins": "*"}})
+CORS(app, resources={r"/rows/*": {"origins": "http://127.0.0.1:3000"}})
 
 rows = [
         {"pos":"0",
@@ -51,10 +51,10 @@ rows = [
 def home():
     return "Hello World"
 
-@app.route("/rows")
+@app.route("/rows", methods=['GET'])
 def getRows():
-    log("Received Row Request")
     json_rows = generateJSONFromList(rows)
+    log(f"Sent Row Request {len(json_rows)}")
     return json_rows
 
 def generateJSONFromList(list):

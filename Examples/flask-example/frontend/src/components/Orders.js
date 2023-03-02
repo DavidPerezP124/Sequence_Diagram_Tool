@@ -13,20 +13,20 @@ export default function Orders() {
   const [rows, setRows] = useState([]);
   const ws_url = 'ws://localhost:8282/process?id=python_example';
   const { sendMessage } = useWebSocket(ws_url);
-
+  const network = new Network();
 
   useEffect(() => {
-    let network = new Network()
     let time = new Date().getTime()
     time = Math.round((time))
     console.log(time)
     sendMessage(`{"type":"Client","data":"requesting rows","date":"${time}"}`)
     network.getRows().then((res) => {
       if (res) {
+        console.log('Did Set')
         setRows(res)
       }
     })
-  },[sendMessage])
+  },[])
 
 
   return (
@@ -44,7 +44,7 @@ export default function Orders() {
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow key={row.id}>
+            <TableRow key={row.pos}>
               <TableCell>{row.date}</TableCell>
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.shipTo}</TableCell>
