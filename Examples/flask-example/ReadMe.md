@@ -16,3 +16,11 @@ On JS the `new Date().getTime()` returns this format out of the box.
 On python you would need to multiply the current value of `timestamp()` by 1000.
 
 They need to be on the same timezone, or else you will get very different results and organization.
+
+You can execute these bash scripts to start the backend and front end, you need to set chmod to executable and individual terminals:
+```console
+./run_backend.sh
+```
+```
+./run_frontend.sh
+```

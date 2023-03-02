@@ -1,0 +1,3 @@
+flask
+flask-cors
+websocket_client
